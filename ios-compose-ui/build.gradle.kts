@@ -15,7 +15,8 @@ kotlin {
                 freeCompilerArgs += listOf(
                     "-linker-option", "-framework", "-linker-option", "Metal",
                     "-linker-option", "-framework", "-linker-option", "CoreText",
-                    "-linker-option", "-framework", "-linker-option", "CoreGraphics"
+                    "-linker-option", "-framework", "-linker-option", "CoreGraphics",
+                    "-linker-option", "-lsqlite3"
                 )
             }
         }
@@ -27,7 +28,8 @@ kotlin {
                 freeCompilerArgs += listOf(
                     "-linker-option", "-framework", "-linker-option", "Metal",
                     "-linker-option", "-framework", "-linker-option", "CoreText",
-                    "-linker-option", "-framework", "-linker-option", "CoreGraphics"
+                    "-linker-option", "-framework", "-linker-option", "CoreGraphics",
+                    "-linker-option", "-lsqlite3"
                 )
             }
         }

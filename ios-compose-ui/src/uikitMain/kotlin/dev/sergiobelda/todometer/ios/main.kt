@@ -29,12 +29,25 @@ import androidx.compose.material.icons.rounded.Menu
 import androidx.compose.material.icons.rounded.MoreVert
 import androidx.compose.ui.main.defaultUIKitMain
 import androidx.compose.ui.window.Application
+import dev.sergiobelda.todometer.common.core.di.initKoin
 import dev.sergiobelda.todometer.ios.theme.ToDometerAppTheme
+
+val koin = initKoin().koin
 
 fun main() {
     defaultUIKitMain(
         "ToDometer",
         Application("ToDometer") {
+            /*
+            val getAppThemeUseCase = koin.get<GetAppThemeUseCase>()
+            val appThemeState = getAppThemeUseCase.invoke().collectAsState(initial = AppTheme.FOLLOW_SYSTEM)
+            val darkTheme: Boolean = when (appThemeState.value) {
+                AppTheme.FOLLOW_SYSTEM -> isSystemInDarkTheme()
+                AppTheme.DARK_THEME -> true
+                AppTheme.LIGHT_THEME -> false
+            }
+            */
+
             ToDometerAppTheme {
                 Column {
                     Scaffold(
