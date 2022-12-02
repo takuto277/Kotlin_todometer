@@ -30,8 +30,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.ui.main.defaultUIKitMain
 import androidx.compose.ui.window.Application
 import dev.icerock.moko.resources.desc.desc
-import dev.sergiobelda.todometer.common.resources.MR
 import dev.sergiobelda.todometer.common.core.di.initKoin
+import dev.sergiobelda.todometer.common.domain.usecase.apptheme.GetAppThemeUseCase
+import dev.sergiobelda.todometer.common.resources.MR
 import dev.sergiobelda.todometer.ios.theme.ToDometerAppTheme
 
 val koin = initKoin().koin
@@ -43,8 +44,8 @@ fun main() {
     defaultUIKitMain(
         appName,
         Application(appName) {
-            /*
             val getAppThemeUseCase = koin.get<GetAppThemeUseCase>()
+            /*
             val appThemeState = getAppThemeUseCase.invoke().collectAsState(initial = AppTheme.FOLLOW_SYSTEM)
             val darkTheme: Boolean = when (appThemeState.value) {
                 AppTheme.FOLLOW_SYSTEM -> isSystemInDarkTheme()
